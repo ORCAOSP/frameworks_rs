@@ -294,7 +294,6 @@ bool rsdAllocationInit(const Context *rsc, Allocation *alloc, bool forceZero) {
 
         ptr = (uint8_t *)malloc(allocSize);
         if (!ptr) {
-            alloc->mHal.drv = NULL;
             free(drv);
             return false;
         }
